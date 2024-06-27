@@ -1,856 +1,96 @@
-
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="yandex-verification" content="cc51773839a91780" />
-    <title>Ремонт ванных комнат</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="1.css">
+    <title>Страница с кнопками</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            min-width: 160px;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
-
 <body>
-    <header class="header header-main">
-        <div class="header__inner" style="background: rgba(208, 177, 148, 0.6);">
-            <div class="header__top">
-                <a class="logo" href="#">
-                    <img src="images/Vector.png" alt="header__logo">
-                    <div class="logo__text">
-                        <div class="logo__title">artistic</div>
-                        <div class="logo__subtitle">Ремонт ванных комнат</div>
-                    </div>
-                </a>
-                <nav class="menu">
-                    <ul class="menu__list">
-                        <li class="menu__item"><a class="menu__item-link" href="#">Главная</a></li>
-                        <li class="menu__item"><a class="menu__item-link" href="#">Цены</a></li>
-                        <li class="menu__item"><a class="menu__item-link" href="#">Калькулятор
-                                ремонта</a></li>
-                        <li class="menu__item"><a class="menu__item-link" href="#">Примеры работ</a></li>
-                        <li class="menu__item"><a class="menu__item-link" href="#">Контакты</a></li>
-                        <li class="menu__item"><a class="menu__item-link" href="#">Отзывы</a></li>
-                    </ul>
-                </nav>
-                <a class="phone" href="tel:+78129872288">+7(812) 987 - 22 - 88</a>
-                <button class="menu__btn" onclick="toggleMenu()"><span></span></button>
-
+    <div class="button-container">
+        <a href="file:///D:/ПРЕДМЕТЫ/3 курс/ПССИП/Лр1-3/htmltags.html"><button>Лр1-3</button></a>
+        <a href="file:///D:/ПРЕДМЕТЫ/3 курс/ПССИП/Лр4/htmltags.html"><button>Лр4</button></a>
+        
+        <div class="dropdown">
+            <button class="dropbtn">Лр5-8</button>
+            <div class="dropdown-content">
+                <a href="file:///D:/ПРЕДМЕТЫ/3 курс/ПССИП/Лр5-8/Лр5/Flex/Flex.html">Лр5</a>
+                <a href="file:///D:/ПРЕДМЕТЫ/3 курс/ПССИП/Лр5-8/Лр6/grid.html">Лр6</a>
+                <a href="file:///D:/ПРЕДМЕТЫ/3 курс/ПССИП/Лр5-8/Лр7/adaptiv.html">Лр7</a>
+                <a href="file:///D:/ПРЕДМЕТЫ/3 курс/ПССИП/Лр5-8/Лр8/index.html">Лр8</a>
             </div>
         </div>
-        <nav class="menuss">
-            <div class="close" id="cls">X</div>
-            <ul>
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Каталог</a></li>
-                <li><a href="#">Корзина</a></li>
-            </ul>
-        </nav>
-        </div>
-        <div class="header__content">
-            <h2 class="header__title">ARTISTIC</h2>
-            <h1 class="header__subtitle">Бережный и аккуратный ремонт для вашей ванной </h1>
-        </div>
-
-    </header>
-    <section class="header__slider">
-        <div class="header__item" style="background-image: url(./images/header-bg.jpg);"></div>
-    </section>
-    <section class="advantages ">
-        <div class="container">
-            <div class="advantages__question">Почему выбирают нас </div>
-            <div class="advantages__inner">
-                <h3 class="advantages__title section-title">Мы работаем только в Санкт-Петербурге. Благодаря этому
-                    поддерживаем
-                    качество и не распыляемся</h3>
-                <div class="advantages__line"><span></span></div>
-                <ul class="advantages__list">
-                    <li class="advantages__item">
-                        <div class="advantages__item-title">Гарантия </div>
-                        <p class="advantages__text">Реальная гарантия <br><span>60 месяцев</span></p>
-                    </li>
-                    <li class="advantages__item">
-                        <div class="advantages__item-title">Выгода</div>
-                        <p class="advantages__text">Ремонт ванной
-                            <br>от <span>27 000 руб.</span>
-                        </p>
-                    </li>
-                    <li class="advantages__item">
-                        <div class="advantages__item-title">Скорость</div>
-                        <p class="advantages__text">Ванна под ключ
-                            <br> за <span>12 дней </span>
-                        </p>
-                    </li>
-                    <li class="advantages__item">
-                        <div class="advantages__item-title">Опыт</div>
-                        <p class="advantages__text">Успешно трудимся
-                            <br> начиная с <span> 2007 года</span>
-                        </p>
-                    </li>
-                </ul>
-                <a class="advantages__btn" href="#">Оставить заявку</a>
+        
+        <a href="file:///D:/ПРЕДМЕТЫ/3 курс/ПССИП/Лр9/index.html"><button>Лр9</button></a>
+        
+        <div class="dropdown">
+            <button class="dropbtn">Лр10-12</button>
+            <div class="dropdown-content">
+                <a href="file:///D:/ПРЕДМЕТЫ/3 курс/ПССИП/Лр10-12/Задание 1/index.html">Задание 1</a>
+                <a href="file:///D:/ПРЕДМЕТЫ/3 курс/ПССИП/Лр10-12/Задание 2/index.html">Задание 2</a>
+                <a href="file:///D:/ПРЕДМЕТЫ/3 курс/ПССИП/Лр10-12/Задание 3/index.html">Задание 3</a>
+                <a href="file:///D:/ПРЕДМЕТЫ/3 курс/ПССИП/Лр10-12/Задание 4/index.html">Задание 4</a>
+                <a href="file:///D:/ПРЕДМЕТЫ/3 курс/ПССИП/Лр10-12/Задание 5/index.html">Задание 5</a>
             </div>
         </div>
-    </section>
-    <section class="form section-styles">
-        <div class="form__img">
-            <img src="images/form-img1.jpg" alt="form-img">
-        </div>
-        <div class="container">
-            <h3 class="form__title section-title">Расчитайте стоимость ремонта санузла быстро
-                и легко со скидкой <span>5 000 рублей</span></h3>
-            <form class="form__content" action="mail.php" method="POST" id="form1">
-                <div class="form__inputs">
-                    <p class="form__name">Площадь санузла</p>
-                    <input class="form__input" type="text" placeholder="м2" name="area">
-                    <p class="form__name">Имя</p>
-                    <input class="form__input" type="text" placeholder="Ваше имя" name="userName">
-                    <p class="form__name">Телефон</p>
-                    <input class="form__input class" type="text" inputmode="tel" placeholder="+ 7(___)___-__-__"
-                           name="userPhone" required>
-                    <button class="form__btn btn" name="submit" type="submit">Рассчитать стоимость</button>
-                </div>
-            </form>
-        </div>
-    </section>
-    <section class="works section-styles" id="our-service">
-        <div class="container">
-            <div class="title-center">
-                <h3 class="works__title section-title">
-                    Наши услуги
-                </h3>
-            </div>
-            <ul class="works__inner">
-                <li class="works__item" style="background-image: url(./images/works-img1.jpg)">
-                    <div class="works__item-title">
-                        Ремонт санузлов под ключ
-                    </div>
-                </li>
-                <li class="works__item" style="background-image: url(./images/works-img2.jpg)">
-                    <div class="works__item-title">
-                        Закупка и доставка товаров
-                    </div>
-                </li>
-                <li class="works__item" style="background-image: url(./images/works-img3.jpg)">
-                    <div class="works__item-title">
-                        Демонтажные работы
-                    </div>
-                </li>
-                <li class="works__item" style="background-image: url(./images/works-img4.jpg)">
-                    <div class="works__item-title">
-                        Укладки плитки на стены и пол
-                    </div>
-                </li>
-                <li class="works__item" style="background-image: url(./images/works-img5.jpg)">
-                    <div class="works__item-title">
-                        Разводка труб
-                    </div>
-                </li>
-                <li class="works__item" style="background-image: url(./images/works-img6.jpg)">
-                    <div class="works__item-title">
-                        Разводка электропроводки
-                    </div>
-                </li>
-                <li class="works__item" style="background-image: url(./images/works-img7.jpg)">
-                    <div class="works__item-title">
-                        Отделка стен
-                    </div>
-                </li>
-                <li class="works__item" style="background-image: url(./images/works-img8.jpg)">
-                    <div class="works__item-title">
-                        Выравнивание полов
-                    </div>
-                </li>
-                <li class="works__item" style="background-image: url(./images/works-img9.jpg)">
-                    <div class="works__item-title">
-                        Отделка потолка
-                    </div>
-                </li>
-                <li class="works__item" style="background-image: url(./images/works-img10.jpg)">
-                    <div class="works__item-title">
-                        Дизайн проект
-                    </div>
-                </li>
-                <li class="works__item" style="background-image: url(./images/works-img11.jpg)">
-                    <div class="works__item-title">
-                        Установка бытовой техника
-                    </div>
-                </li>
-                <li class="works__item" style="background-image: url(./images/works-img12.jpg)">
-                    <div class="works__item-title">
-                        Установка сантехники
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="examples section-styles" id="examples">
-        <div class="title-center">
-            <h3 class="examples__title section-title">
-                Примеры работ
-            </h3>
-        </div>
-        <div class="examples__inner">
-            <div class="examples__item">
-                <div class="examples__item-left examples-1">
-                    <div class="examples__item-images">
-                        <a href="./images/examples1-img01-big.jpg" data-fancybox="examples1" class="examples__item-img"
-                            style="background: url(./images/examples1-img01.jpg) no-repeat;">
-                            <p class="examples__item-text">До</p>
-                            <a href="./images/works/examples-works1-gallery-old02-big.jpg" data-fancybox="examples1"
-                                style="display: none"></a>
-                            <a href="./images/works/examples-works1-gallery-old03-big.jpg" data-fancybox="examples1"
-                                style="display: none"></a>
-                        </a>
-                        <a href="./images/examples1-img02-big.jpg" data-fancybox="examples1" class="examples__item-img"
-                            style="background: url(./images/examples1-img02.jpg) no-repeat;">
-                            <p class="examples__item-text">После</p>
-                        </a>
-                    </div>
-                    <div class="examples__gallery">
-                        <a href="./images/examples1-gallery01-big.jpg" data-fancybox="examples1"> <img
-                                class="examples__gallery-img" src="./images/examples1-gallery01.jpg"
-                                alt="gallery1-img1"></a>
-                        <a href="./images/examples1-gallery02-big.jpg" data-fancybox="examples1"><img
-                                class="examples__gallery-img" src="./images/examples1-gallery02.jpg"
-                                alt="gallery1-img2"></a>
-                        <a href="./images/examples1-gallery03-big.jpg" data-fancybox="examples1"><img
-                                class="examples__gallery-img" src="./images/examples1-gallery03.jpg"
-                                alt="gallery1-img3"></a>
-                    </div>
-                </div>
-                <div class="examples__content">
-                    <div class="examples__content-title">
-                        Ремонт санузла в стиле лофт
-                    </div>
-                    <div class="examples__content-info">
-                        <div class="examples__argument">
-                            <div class="examples__argument-title">4,2 м2</div>
-                            <div class="examples__argument-subtitle">Площадь санузла </div>
-                        </div>
-                        <div class="examples__argument">
-                            <div class="examples__argument-title">15 дней</div>
-                            <div class="examples__argument-subtitle">Сроки ремонта </div>
-                        </div>
-                    </div>
-                    <a class="video-btn" data-fancybox="examples1" href="images/video.mp4">Смотреть
-                        видео</a>
-                    <a class="examples__btn btn" href="#">Подробнее</a>
-                </div>
-            </div>
-            <div class="examples__item">
-                <div class="examples__item-left examples-2">
-                    <div class="examples__item-images">
-                        <a href="./images/examples2-img01-big.jpg" data-fancybox="examples2" class="examples__item-img"
-                            style="background: url(./images/examples2-img01.jpg) no-repeat;">
-                            <p class="examples__item-text">До</p>
-                            <a href="./images/works/examples-works2-gallery-old02-big.jpg" data-fancybox="examples2">
-                            </a>
-                        </a>
-                        <a href="./images/examples2-img02-big.jpg" data-fancybox="examples2" class="examples__item-img"
-                            style="background: url(./images/examples2-img02.jpg) no-repeat;">
-                            <p class="examples__item-text">После</p>
-                        </a>
-                    </div>
-                    <div class="examples__gallery">
-                        <a href="./images/examples2-gallery01-big.jpg" data-fancybox="examples2"> <img
-                                class="examples__gallery-img" src="./images/examples2-gallery01.jpg"
-                                alt="gallery2-img1"></a>
-                        <a href="./images/examples2-gallery02-big.jpg" data-fancybox="examples2"><img
-                                class="examples__gallery-img" src="./images/examples2-gallery02.jpg"
-                                alt="gallery2-img2"></a>
-                        <a href="./images/examples2-gallery03-big.jpg" data-fancybox="examples2"><img
-                                class="examples__gallery-img" src="./images/examples2-gallery03.jpg"
-                                alt="gallery2-img3"></a>
-                    </div>
-                </div>
-                <div class="examples__content">
-                    <div class="examples__content-title">
-                        Ремонт ванной комнаты
-                        и санузла
-                    </div>
-                    <div class="examples__content-info">
-                        <div class="examples__argument">
-                            <div class="examples__argument-title">5 м2</div>
-                            <div class="examples__argument-subtitle">Площадь санузла </div>
-                        </div>
-                        <div class="examples__argument">
-                            <div class="examples__argument-title">20 дней</div>
-                            <div class="examples__argument-subtitle">Сроки ремонта </div>
-                        </div>
-                    </div>
-                    <a class="video-btn" data-fancybox="examples2" href="images/video.mp4">Смотреть
-                        видео</a>
-                    <a class="examples__btn btn" href="#">Подробнее</a>
-                </div>
-            </div>
-            <div class="examples__item">
-                <div class="examples__item-left examples-3">
-                    <div class="examples__item-images">
-                        <a href="./images/examples3-img01-big.jpg" data-fancybox="examples3" class="examples__item-img"
-                            style="background: url(./images/examples3-img01.jpg) no-repeat;">
-                            <p class="examples__item-text">До</p>
-                        </a>
-                        <a href="./images/works/examples-works4-gallery-old01-big.jpg" data-fancybox="examples3"></a>
-                        <a href="./images/examples3-img02-big.jpg" data-fancybox="examples3" class="examples__item-img"
-                            style="background: url(./images/examples3-img02.jpg) no-repeat;">
-                            <p class="examples__item-text">После</p>
-                        </a>
-                    </div>
-                    <div class="examples__gallery">
-                        <a href="./images/examples3-gallery01-big.jpg" data-fancybox="examples3"> <img
-                                class="examples__gallery-img" src="./images/examples3-gallery01.jpg"
-                                alt="gallery3-img1"></a>
-                        <a href="./images/examples3-gallery02-big.jpg" data-fancybox="examples3"><img
-                                class="examples__gallery-img" src="./images/examples3-gallery02.jpg"
-                                alt="gallery3-img2"></a>
-                        <a href="./images/examples3-gallery03-big.jpg" data-fancybox="examples3"><img
-                                class="examples__gallery-img" src="images/video.mp4"
-                                alt="gallery3-img3"></a>
-                    </div>
-                </div>
-                <div class="examples__content">
-                    <div class="examples__content-title">
-                        Ремонт раздельного санузла
-                    </div>
-                    <div class="examples__content-info">
-                        <div class="examples__argument">
-                            <div class="examples__argument-title">4 м2</div>
-                            <div class="examples__argument-subtitle">Площадь санузла </div>
-                        </div>
-                        <div class="examples__argument">
-                            <div class="examples__argument-title">15 дней</div>
-                            <div class="examples__argument-subtitle">Сроки ремонта </div>
-                        </div>
-                    </div>
-                    <a class="video-btn video-btn3" data-fancybox="examples3"
-                        href="./videos/examples3-video.mp4">Смотреть видео</a>
-                    <a class="examples__btn btn" href="#">Подробнее</a>
-                </div>
-            </div>
-            <div class="examples__item">
-                <div class="examples__item-left examples-4">
-                    <div class="examples__item-images">
-                        <a href="./images/examples4-img01-big.jpg" data-fancybox="examples4" class="examples__item-img"
-                            style="background: url(./images/examples4-img01.jpg) no-repeat;">
-                            <p class="examples__item-text">До</p>
-                        </a>
-                        <a href="./images/works/examples-works3-gallery-old01-big.jpg" data-fancybox="examples4">
-                            <a href="./images/works/examples-works3-gallery-old02-big.jpg" data-fancybox="examples4">
-                                <a href="./images/examples4-img02-big.jpg" data-fancybox="examples4"
-                                    class="examples__item-img"
-                                    style="background: url(./images/examples4-img02.jpg) no-repeat;">
-                                    <p class="examples__item-text">После</p>
-                                </a>
-                    </div>
-                    <div class="examples__gallery">
-                        <a href="./images/examples4-gallery01-big.jpg" data-fancybox="examples4"> <img
-                                class="examples__gallery-img" src="./images/examples4-gallery01.jpg"
-                                alt="gallery4-img1"></a>
-                        <a href="./images/examples4-gallery02-big.jpg" data-fancybox="examples4"><img
-                                class="examples__gallery-img" src="./images/examples4-gallery02.jpg"
-                                alt="gallery4-img2"></a>
-                        <a href="./images/examples4-gallery03-big.jpg" data-fancybox="examples4"><img
-                                class="examples__gallery-img" src="./images/examples4-gallery03.jpg"
-                                alt="gallery4-img3"></a>
-                    </div>
-                </div>
-                <div class="examples__content">
-                    <div class="examples__content-title">
-                        Ремонт совмещенного санузла
-                    </div>
-                    <div class="examples__content-info">
-                        <div class="examples__argument">
-                            <div class="examples__argument-title">4 м2</div>
-                            <div class="examples__argument-subtitle">Площадь санузла </div>
-                        </div>
-                        <div class="examples__argument">
-                            <div class="examples__argument-title">14 дней</div>
-                            <div class="examples__argument-subtitle">Сроки ремонта </div>
-                        </div>
-                    </div>
-                    <a class="video-btn" data-fancybox="examples4" href="images/video.mp4">Смотреть
-                        видео</a>
-                    <a class="examples__btn btn" href="#">Подробнее</a>
-                </div>
-            </div>
-            <div class="examples__item">
-                <div class="examples__item-left examples-5">
-                    <div class="examples__item-images">
-                        <a href="./images/examples5-img01-big.jpg" data-fancybox="examples5" class="examples__item-img"
-                            style="background: url(./images/examples5-img01.jpg) no-repeat;">
-                            <p class="examples__item-text">До</p>
-                        </a>
-                        <a href="./images/works/examples-works8-gallery-old01-big.jpg" data-fancybox="examples5">
-                            <a href="./images/works/examples-works8-gallery-old03-big.jpg" data-fancybox="examples5">
-                                <a href="./images/examples5-img02-big.jpg" data-fancybox="examples5"
-                                    class="examples__item-img"
-                                    style="background: url(./images/examples5-img02.jpg) no-repeat;">
-                                    <p class="examples__item-text">После</p>
-                                </a>
-                    </div>
-                    <div class="examples__gallery">
-                        <a href="./images/examples5-gallery01-big.jpg" data-fancybox="examples5"> <img
-                                class="examples__gallery-img" src="./images/examples5-gallery01.jpg"
-                                alt="gallery5-img1"></a>
-                        <a href="./images/examples5-gallery02-big.jpg" data-fancybox="examples5"><img
-                                class="examples__gallery-img" src="./images/examples5-gallery02.jpg"
-                                alt="gallery5-img2"></a>
-                        <a href="./images/examples5-gallery03-big.jpg" data-fancybox="examples5"><img
-                                class="examples__gallery-img" src="./images/examples5-gallery03.jpg"
-                                alt="gallery5-img3"></a>
-                    </div>
-                </div>
-                <div class="examples__content">
-                    <div class="examples__content-title">
-                        Ремонт санузла
-                    </div>
-                    <div class="examples__content-info">
-                        <div class="examples__argument">
-                            <div class="examples__argument-title">4,5 м2</div>
-                            <div class="examples__argument-subtitle">Площадь санузла </div>
-                        </div>
-                        <div class="examples__argument">
-                            <div class="examples__argument-title">15 дней</div>
-                            <div class="examples__argument-subtitle">Сроки ремонта </div>
-                        </div>
-                    </div>
-                    <a class="video-btn" data-fancybox="examples5" href="images/video.mp4">Смотреть
-                        видео</a>
-                    <a class="examples__btn btn" href="#">Подробнее</a>
-                </div>
-            </div>
-            <div class="examples__item">
-                <div class="examples__item-left examples-6">
-                    <div class="examples__item-images">
-                        <a href="./images/examples6-img01-big.jpg" data-fancybox="examples6" class="examples__item-img"
-                            style="background: url(./images/examples6-img01.jpg) no-repeat;">
-                            <p class="examples__item-text">До</p>
-                        </a>
-                        <a href="./images/works/examples-works7-gallery-old02-big.jpg" data-fancybox="examples6"></a>
-                        <a href="./images/works/examples-works7-gallery-old03-big.jpg" data-fancybox="examples6"></a>
-                        <a href="./images/examples6-img02-big.jpg" data-fancybox="examples6" class="examples__item-img"
-                            style="background: url(./images/examples6-img02.jpg) no-repeat;">
-                            <p class="examples__item-text">После</p>
-                        </a>
-
-                    </div>
-                    <div class="examples__gallery">
-                        <a href="./images/examples6-gallery01-big.jpg" data-fancybox="examples6"> <img
-                                class="examples__gallery-img" src="./images/examples6-gallery01.jpg"
-                                alt="gallery6-img1"></a>
-                        <a href="./images/examples6-gallery02-big.jpg" data-fancybox="examples6"><img
-                                class="examples__gallery-img" src="./images/examples6-gallery02.jpg"
-                                alt="gallery6-img2"></a>
-                        <a href="./images/examples6-gallery03-big.jpg" data-fancybox="examples6"><img
-                                class="examples__gallery-img" src="./images/examples6-gallery03.jpg"
-                                alt="gallery6-img3"></a>
-                    </div>
-                </div>
-                <div class="examples__content">
-                    <div class="examples__content-title">
-                        Ремонт ванной комнаты
-                    </div>
-                    <div class="examples__content-info">
-                        <div class="examples__argument">
-                            <div class="examples__argument-title">4,5 м2</div>
-                            <div class="examples__argument-subtitle">Площадь санузла </div>
-                        </div>
-                        <div class="examples__argument">
-                            <div class="examples__argument-title">16 дней</div>
-                            <div class="examples__argument-subtitle">Сроки ремонта </div>
-                        </div>
-                    </div>
-                    <a class="video-btn" data-fancybox="examples6" href="images/video.mp4">Смотреть
-                        видео</a>
-                    <a class="examples__btn btn" href="#">Подробнее</a>
-                </div>
+        
+        <div class="dropdown">
+            <button class="dropbtn">Лр13-14</button>
+            <div class="dropdown-content">
+                <a href="file:///D:/ПРЕДМЕТЫ/3 курс/ПССИП/Лр13-14/Задание 1/index.html">Задание 1</a>
+                <a href="file:///D:/ПРЕДМЕТЫ/3 курс/ПССИП/Лр13-14/Задание 2/index.html">Задание 2</a>
+                <a href="file:///D:/ПРЕДМЕТЫ/3 курс/ПССИП/Лр13-14/Задание 3/index.html">Задание 3</a>
+                <a href="file:///D:/ПРЕДМЕТЫ/3 курс/ПССИП/Лр13-14/Задание 4/index.html">Задание 4</a>
+                <a href="file:///D:/ПРЕДМЕТЫ/3 курс/ПССИП/Лр13-14/Задание 5/index.html">Задание 5</a>
             </div>
         </div>
-    </section>
-    <section class="calc section-styles">
-        <div class="container">
-            <div class="title-center">
-                <h3 class="section-title calc__title">Расчитайте стоимость ремонта</h3>
-            </div>
-            <form action="mail.php" method="POST" id="form2">
-                <div class="calc-types">
-                    <div class="calc-title">Тип санузла:</div>
-                    <label class="calc__radio">
-                        <input class="radio" type="radio" value="1" name="radioBathroom" checked><span
-                            class="radio-style"></span>
-                        <label for="calc-radio-1">Совмещённый</label>
-                    </label>
-                    <label class="calc__radio">
-                        <input class="radio" type="radio" value="2" name="radioBathroom"><span
-                            class="radio-style"></span>
-                        <label for="calc-radio-2">Раздельный</label>
-                    </label>
-                    <label class="calc__radio">
-                        <input class="radio" type="radio" value="3" name="radioBathroom"><span
-                            class="radio-style"></span>
-                        <label for="calc-radio-3">Ванная комната</label>
-                    </label>
-                    <label class="calc__radio">
-                        <div class="calc-types__title calc-title">Площадь:</div>
-                        <input class="calc-types__input section-input" type="text" value="12 м2" name="area">
-                        <div class="btn__inner">
-                            <a class="btn-plus"><span></span></a>
-                            <a class="btn-minus"><span></span> </a>
-                        </div>
-                    </label>
-                </div>
-                <div class="calc__selects">
-                    <div class="calc__select-item">
-                        <div class="select__item-title calc-title">Материал отделки стен:</div>
-                        <div class="calc__select">
-
-                            <select class="select" name="wall-decoration">
-
-                                <option selected disabled>Выберите</option>
-                                <option>Плитка</option>
-                                <option>Керамогранит</option>
-                                <option>Мозаика</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="calc__select-item">
-                        <div class="select__item-title calc-title">Материал отделки пола:</div>
-                        <div class="calc__select">
-                            <select class="select" name="tile-decoration">
-                                <option selected disabled>Выберите</option>
-                                <option>Плитка</option>
-                                <option>Керамогранит</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="calc__select-item">
-                        <div class="select__item-title calc-title">Материал отделки потолка:</div>
-                        <div class="calc__select">
-
-                            <select class="select" name="ceiling-decoration">
-                                <option selected disabled>Выберите</option>
-                                <option>Натяжной потолок</option>
-                                <option>Реечный потолок</option>
-                                <option>Панель ПВХ</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="calc__checkboxes">
-                    <div class="calc__checkboxes-title calc-title">Дополнительные услуги:</div>
-                    <div class="checkboxes__inner">
-                        <div class="calc__checkbox-left">
-                            <label class="calc__checkbox">
-                                <input class="check-box" type="checkbox" checked name="add-service-1" value="yes">
-                                <span class="check-style"></span>Подвесной унитаз (инсталляция)
-                            </label>
-
-                            <label class="calc__checkbox">
-                                <input class="check-box" type="checkbox" name="add-service-2" value="yes">
-                                <span class="check-style"></span>Душевая кабина
-                            </label>
-                            <label class="calc__checkbox">
-                                <input class="check-box" type="checkbox" name="add-service-3" value="yes">
-                                <span class="check-style"></span>Гигиенический душ (биде)
-                            </label>
-                            <label class="calc__checkbox">
-                                <input class="check-box" type="checkbox" name="add-service-4" value="yes">
-                                <span class="check-style"></span>Конструкция из ГКП (ниши/полки)
-                            </label>
-                        </div>
-                        <div class="calc__checkbox-right">
-                            <label class="calc__checkbox">
-                                <input class="check-box" type="checkbox" name="add-service-5" value="yes">
-                                <span class="check-style"></span>Теплый пол
-                            </label>
-                            <label class="calc__checkbox">
-                                <input class="check-box" type="checkbox" name="add-service-6" value="yes">
-                                <span class="check-style"></span>Люк “неведимка” под плитку
-                            </label>
-                            <label class="calc__checkbox">
-                                <input class="check-box" type="checkbox" name="add-service-7" value="yes">
-                                <span class="check-style"></span>Водонагреватель
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="calc__form section-form">
-                    <div class="calc-form__inner">
-                        <h3 class="calc__form-title">Осталось заполнить форму</h3>
-
-                        <div class="calc__form-inputs">
-                            <div class="calc__form-text">Вы узнаете стоимость ремонта <br> и получите скидку 10 %</div>
-                            <input class="calc__form-input section-input" placeholder="Ваше имя:" type="text"
-                                name="userName">
-                            <input class="calc__form-input section-input" placeholder="+ 7(___)___-__-__ " type="text"
-                                inputmode="tel" name="userPhone" required>
-                            <button class="btn calc__form-btn" type="submit" name="submit">Рассчитать стоимость</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-
-    </section>
-    <section class="prices section-styles" id="prices">
-        <div class="container">
-            <div class="title-center">
-                <h3 class="prices__title section-title">Цены на услуги по ремонту ванной комнаты</h3>
-            </div>
-            <div class="prices__inner">
-                <div class="prices__item">
-                    <div class="prices__item-title">
-                        Отделка стен
-                    </div>
-                    <div class="prices__item-info">Шпатлевка стен <span>от 300р. кв.м
-                        </span></div>
-                    <div class="prices__item-info">Облицовка стен мозаикой <span> от 1400р. кв.м
-                        </span></div>
-                    <div class="prices__item-info">Укладка плитки на стены<span> от 900р. кв.м
-                        </span></div>
-                    <div class="prices__item-info">Декоративная штукатурка<span> от 800р. кв.м
-                        </span></div>
-                    <div class="prices__item-info">Покраска стен<span> от 250р. кв.м
-                        </span></div>
-                    <div class="prices__item-info">Штукатурка стен<span> от 450р. кв.м
-                        </span></div>
-                </div>
-                <div class="prices__item">
-                    <div class="prices__item-title">
-                        Штукатурка стен
-                    </div>
-                    <div class="prices__item-info">Утепление пола<span>от 400р. кв.м
-                        </span></div>
-                    <div class="prices__item-info">Укладка керамогранита <span> от 1000р. кв.м
-                        </span></div>
-                    <div class="prices__item-info">Облицовка природным камнем<span> от 1200р. кв.м
-                        </span></div>
-                    <div class="prices__item-info">Укладка плитки на пол<span> от 900р. кв.м
-                        </span></div>
-                    <div class="prices__item-info">Стяжка пола<span> от 350р. кв.м
-                        </span></div>
-                    <div class="prices__item-info">Гидроизоляция пола<span> от 200р. кв.м
-                        </span></div>
-                </div>
-                <div class="prices__item">
-                    <div class="prices__item-title">
-                        Отделка потолка
-                    </div>
-                    <div class="prices__item-info">Окрашивание потолка <span>от 250р. кв.м
-                        </span></div>
-                    <div class="prices__item-info">Натяжной потолок <span> от 500р. кв.м
-                        </span></div>
-                    <div class="prices__item-info">Реечный потолок<span> от 800р. кв.м
-                        </span></div>
-                    <div class="prices__item-info">Потолок из ГКЛВ<span> от 800р. кв.м
-                        </span></div>
-                    <div class="prices__item-info">Шпатлевка потолка<span> от 300р. кв.м
-                        </span></div>
-                    <div class="prices__item-info">Штукатурка потолка<span> от 600р. кв.м
-                        </span></div>
-                    <div class="prices__item-info">Шумоизоляция потолка<span> от 600р. кв.м
-                        </span></div>
-                    </span>
-                </div>
-                <div class="prices__item">
-                    <div class="prices__item-title">
-                        Сантехника/электрика
-                    </div>
-                    <div class="prices__item-info">Установка смесителя <span>от 700р.
-                        </span></div>
-                    <div class="prices__item-info">Установка раковины<span> от 1200р.
-                        </span></div>
-                    <div class="prices__item-info">Установка полотенцесушителя<span> от 1500р.
-                        </span></div>
-                    <div class="prices__item-info">Установка унитаза<span> от 1500р.
-                        </span></div>
-                    <div class="prices__item-info">Установка ванны<span> от 2000р.
-                        </span></div>
-                    <div class="prices__item-info">Установка душевой кабины<span> от 4000р.
-                        </span></div>
-                    <div class="prices__item-info">Установка стиральной машины<span> от 1000р.
-                        </span></div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-    <section class="info section-styles">
-        <div class="container">
-            <div class="title-center">
-                <h3 class="info__title section-title">Ремонт ванных комнат в Санкт-Петергурге</h3>
-            </div>
-            <div class="info__text">
-                <p> Ванная комната - одно из необходимых и посещаемых мест в
-                    нашем доме. <br><a class="readmore-btn" href="">Читать далее</a>
-                    <p class="output"> Утром, вставая с постели, мы направляемся в ванную комнату для того, чтобы
-                        окончательно
-                        пробудиться ото сна, там же, после тяжелого трудового дня мы подготавливаемся к вечернему
-                        отдыху.
-                        И, несомненно, каждый мечтает о том, чтобы это место релаксации дарило ощущение комфорта и уюта.
-                        Немаловажен и тот момент, что когда приходят гости, они, чаще всего первым делом идут в ванную
-                        и ее внешний вид во многом определяет впечатление о хозяевах.
-                    </p>
-                </p>
-                <p class="output"> Надежная, шикарная, удобная ванная - результат профессионального ремонта. Наша
-                    компания
-                    специализируется
-                    на ремонте ванных комнат в городе Санкт-Петербурге. Главная задача наших
-                    мастеров - выполнить такой ремонт ванной, который долгие годы будет радовать всю Вашу семью,
-                    а гости и соседи будут в восторге.
-                </p>
-                <p class="output"> Основные виды работ, выполняемые нами при отделке ванной комнаты: замена старой,
-                    приевшейся
-                    сантехники,
-                    на новую; замена старых электропроводов; гидроизоляция пола и стен ванной комнаты; выравнивание
-                    стен; монтаж потолка и установка системы освещения; укладка плитки; установка необходимых
-                    сантехнических приборов.
-                </p>
-                <p class="output"> Каждый этап работы согласовывается с заказчиком, берутся во внимание все его
-                    пожелания. Цены наших
-                    услуг намного ниже цен конкурирующих фирм, при этом качество выполнения ремонта остается на высшем
-                    уровне. Предлагаем нашим заказчикам лучший по всему городу сервис обслуживания.
-                </p>
-                <p class="output"> Уже приняли решение о ремонте ванной комнаты в Санкт-Петербурге? Звоните нам! Будем
-                    рады
-                    предоставить исчерпывающие ответы на все Ваши вопросы. <br> <a class='readless-btn'
-                        href="#">Свернуть
-                        текст</a></p>
-            </div>
-        </div>
-    </section>
-    <section class="reviews section-styles" id="reviews">
-        <div class="title-center">
-            <h3 class="reviews__title section-title">
-                Отзывы о нас
-            </h3>
-        </div>
-        <div class="reviews-slider">
-            <div class="reviews-slider__item">
-                <img class="reviews-slider__item-img" src="./images/reviews-slider-img.jpg" alt="reviews-slider-img">
-                <div class="reviews-slider__item-text">
-                    От Ивана Иванова
-                </div>
-            </div>
-            <div class="reviews-slider__item">
-                <img class="reviews-slider__item-img" src="./images/reviews-slider-img.jpg" alt="reviews-slider-img">
-                <div class="reviews-slider__item-text">
-                    От Марии Романовны
-                </div>
-            </div>
-            <div class="reviews-slider__item">
-                <img class="reviews-slider__item-img" src="./images/reviews-slider-img.jpg" alt="reviews-slider-img">
-                <div class="reviews-slider__item-text">
-                    От Марии Романовны
-                </div>
-            </div>
-        </div>
-        <a class="reviews__btn btn" data-fancybox data-src="#reviews-popup">Добавить свой отзыв</a>
-    </section>
-    <section class="phone-form section-styles">
-        <div class="container">
-            <div class="phone-form__inner">
-                <h3 class="phone-form__title section-title">Вызвать замерщика <span>бесплатно</span> </h3>
-                <form action="mail.php" method="POST" class="phone-form__content" id="form3">
-                    <a class="phone-form__phone" href="tel:+78129872288">+7(812) 987 - 22 - 88</a>
-                        <input class="phone-form__input section-input" type="text" inputmode="tel" name="userPhone"
-                            placeholder="Ваш номер телефона" required>
-                        <button class="btn phone-form__btn" type="submit" name="submit">Вызвать
-                            замерщика</button>
-                        </form>
-            </div>
-        </div>
-    </section>
-    <footer class="footer section-styles">
-        <div class="container">
-            <div class="footer__inner">
-                <div class="footer__logo">
-                    <a href="#">
-                        <div class="footer__logo-title">artistic</div>
-                        <div class="footer__logo-subtitle">Ремонт ванных комнат</div>
-                    </a>
-                </div>
-                <div class="footer__items">
-                    <div class="footer__item ">
-                        <div class="footer__item-title">ГЛАВНАЯ</div>
-                        <ul class="footer__list footer-list--first">
-                            <li class="footer__list-item"><a href="/">Ремонт ванных комнат</a></li>
-                            <li class="footer__list-item"><a href="./#our-service"> Наши услуги </a></li>
-                            <li class="footer__list-item"><a href="./works.html"> ФОТО РАБОТ </a></li>
-                            <li class="footer__list-item"><a href="./works.html"> ВИДЕО РАБОТ </a></li>
-                        </ul>
-                    </div>
-                    <div class="footer__item">
-                        <div class="footer__item-title">ПОМОЩЬ</div>
-                        <ul class="footer__list">
-                            <li class="footer__list-item"><a href="./#prices">ЦЕНЫ </a></li>
-                            <li class="footer__list-item"><a href="./calculator.html"> БЕСПЛАТНЫЙ ЗАМЕР</a></li>
-                            <li class="footer__list-item"><a href="./contacts.html"> КОНТАКТЫ </a></li>
-                        </ul>
-                    </div>
-                    <div class="footer__item">
-                        <div class="footer__item-title">НАШ АДРЕС </div>
-                        <ul class="footer__list">
-                            <li class="footer__list-item">
-                                <p>Ремонт санузлов в Санкт-Петербурге</p>
-                                <p>08.00 - 20.00 Без выходных </p>
-                            </li>
-                            <ul class="footer__social">
-                                <div class="footer__item-title">МЫ В СОЦСЕТЯХ </div>
-                                <div class="footer-social__inner">
-                                    <li class="footer__social-item"><a href="#"><img src="./images/soc-ico1.svg"
-                                                alt=""></a>
-                                    </li>
-                                    <li class="footer__social-item"><a href="#"><img src="./images/soc-ico2.svg"
-                                                alt=""></a>
-                                    </li>
-                                    <li class="footer__social-item"><a href="#"><img src="./images/soc-ico3.svg"
-                                                alt=""></a>
-                                    </li>
-                                    <li class="footer__social-item"><a href="#"><img src="./images/soc-ico4.svg"
-                                                alt=""></a>
-                                    </li>
-                                </div>
-                            </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <div id="reviews-popup" style="display: none;" class="reviews-popup">
-        <form action="mail.php" method="POST" id="form6">
-            <p class="form__name">Имя</p>
-            <input class="form__input" type="text" placeholder="Ваше имя" name="userName">
-            <button class="form__btn btn" name="submit" type="submit">Отправить отзыв!</button>
-        </form>
     </div>
-
-	<script>
-window.replainSettings = { id: '80b3194a-af50-4b57-be8e-cfdece800547' };
-(function(u){var s=document.createElement('script');s.type='text/javascript';s.async=true;s.src=u;
-var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);
-})('https://widget.replain.cc/dist/client.js');
-</script>
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-   ym(75802447, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/75802447" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="./js/libs.min.js"></script>
-    <script src="./js/main.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/bug.js"></script>
 </body>
-
 </html>
